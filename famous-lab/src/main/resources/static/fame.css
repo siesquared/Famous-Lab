@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.s3-container {
+  position: relative;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+.s3-container .s3-flip-cards {
+  width: 200px;
+  height: 291px;
+  position: relative;
+  float: left;
+  margin: 15px;
+  transition: all 1s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.s3-container .s3-flip-cards:hover {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.s3-container .s3-flip-cards div {
+  width: 200px;
+  height: 291px;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.s3-container .s3-flip-cards .s3-front-card {
+  color: white;
+  padding: 0.3em;
+  text-align: center;
+  z-index: 2;
+  background: black;
+  box-shadow: 0 4px 3px -3px black;
+}
+.s3-container .s3-flip-cards .s3-reverse-card {
+  padding: 0.3em;
+  border: solid 1px #ccc;
+  background: #f0f0f0;
+  box-shadow: 0 8px 6px -6px black;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.s3-container .s3-flip-cards .s3-reverse-card h1 {
+  margin: 0;
+  padding: 0;
+  border-bottom: solid 1px #f0f0f0;
+}
+.s3-container .s3-flip-cards .s3-reverse-card a {
+  text-decoration: none;
+  color: black;
+  background: white;
+  padding: 0.5em;
+  display: block;
+}
+.s3-container .s3-flip-cards .s3-reverse-card a:hover {
+  color: white;
+  background: black;
+}
+/*"https://images-na.ssl-images-amazon.com/images/I/51CHfNJEAkL._SY445_.jpg"
+
+"http://www.basketballtradingcardsforsale.com/wp-content/uploads/2017/04/ken-griffey-junior-1990-post-baseball-card.jpg"*/
